@@ -3,6 +3,9 @@ name: External Trigger Main
 on:
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   external-trigger-master:
     runs-on: ubuntu-latest
@@ -18,3 +21,8 @@ jobs:
           echo "Type is \`os\`" >> $GITHUB_STEP_SUMMARY
           echo "No external release, exiting" >> $GITHUB_STEP_SUMMARY
           exit 0
+          if grep -q "^webtop_master_${EXT_RELEASE}" <<< "${SKIP_EXTERNAL_TRIGGER}"; then
+            echo "> [!WARNING]" >> $GITHUB_STEP_SUMMARY
+            echo "> Github organizational variable \`SKIP_EXTERNAL_TRIGGER\` matches current external release; skipping trigger." >> $GITHUB_STEP_SUMMARY
+            exit 0
+          fi
