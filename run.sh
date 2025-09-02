@@ -8,4 +8,4 @@ docker run --rm \
   -p 3000:3000 \
   -p 3001:3001 \
   --shm-size="2gb" \
-  lscr.io/linuxserver/webtop:ubuntu-mate
+  lscr.io/linuxserver/webtop:debian-kde
