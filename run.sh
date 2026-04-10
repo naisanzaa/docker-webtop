@@ -6,10 +6,10 @@ images="latest alpine-i3 alpine-mate arch-i3 arch-kde arch-mate arch-xfce debian
 
 echo "https://localhost:3001"
 
-image="ubuntu-kde"
-image="ubuntu-mate"
-image="ubuntu-xfce"
-image="debian-kde"
+#image="ubuntu-kde"
+#image="ubuntu-mate"
+#image="ubuntu-xfce"
+#image="debian-kde"
 image="ubuntu-i3"
 #image="latest"
 
@@ -19,6 +19,3 @@ docker run --rm \
   -p 443:3001 \
   --shm-size="2gb" \
   lscr.io/linuxserver/webtop:$image > run.log 2>&1
-
-# debian-kde
-

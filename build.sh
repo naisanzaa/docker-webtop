@@ -2,10 +2,10 @@
 
 # build
 
-image="ubuntu-kde"
-image="ubuntu-mate"
-image="ubuntu-xfce"
-image="debian-kde"
+#image="ubuntu-kde"
+#image="ubuntu-mate"
+#image="ubuntu-xfce"
+#image="debian-kde"
 image="ubuntu-i3"
 #image="latest"
 
