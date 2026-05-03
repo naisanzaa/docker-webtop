@@ -11,5 +11,6 @@ image="ubuntu-i3"
 
 docker build \
   --pull \
-  -t lscr.io/linuxserver/webtop:$image .
+  -t antsable:$image \
+  -f Dockerfile .
   
