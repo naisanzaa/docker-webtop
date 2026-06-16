@@ -13,4 +13,3 @@ docker build \
   --pull \
   -t antsable:$image \
   -f Dockerfile .
-  
