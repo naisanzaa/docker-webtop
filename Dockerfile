@@ -13,4 +13,4 @@ RUN \
 
 RUN \
     cd /antsable && \
-    bash ansible-local.sh playbooks/readyup.yml
+    bash ansible-local.sh playbooks/readyup-docker-gui.yml
