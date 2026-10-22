@@ -5,12 +5,8 @@ RUN apt install -y git vim tmux
 
 RUN \
     cd / && \
-    git clone https://github.com/TheShellLand/antsable
-
-RUN \
+    git clone https://github.com/TheShellLand/antsable && \
     cd /antsable && \
-    bash install-ansible.sh
-
-RUN \
-    cd /antsable && \
-    bash ansible-local.sh playbooks/readyup-docker-gui.yml
+    bash install-ansible.sh && \
+    bash ansible-local.sh playbooks/readyup-docker-gui.yml && \
+    cd /antsable

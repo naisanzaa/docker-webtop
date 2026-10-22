@@ -13,9 +13,13 @@ echo "https://localhost:3001"
 image="ubuntu-i3"
 #image="latest"
 
-docker run --rm \
+docker rm -f $image || echo
+
+docker run -d \
+  --name $image \
+  --restart always \
   -p 3000:3000 \
   -p 3001:3001 \
   -p 443:3001 \
   --shm-size="2gb" \
-  lscr.io/linuxserver/webtop:$image > run.log 2>&1
+  lscr.io/linuxserver/webtop:$image
